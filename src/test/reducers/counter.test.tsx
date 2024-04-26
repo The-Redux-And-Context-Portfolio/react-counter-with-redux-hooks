@@ -19,6 +19,12 @@ describe("Counter Reducer Redux Test Suite", () => {
     expect(result).toBe(3);
   });
 
+  test("check if default state is returned if 'undefined' is passed", () => {
+    const actionPayload = {type: "hello world"};
+    const result = counterReducer(undefined, actionPayload);
+    expect(result).toBe(0);
+  });
+
   test("check if default state is return for wrong action payload", () => {
     const actionPayload = {type: "hello world"};
     const result = counterReducer(0, actionPayload);

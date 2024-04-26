@@ -1,7 +1,7 @@
-/* app imports */ 
+/* app imports */
 import { AppReduxState } from "../types";
 
-/* selector */ 
+/* selector */
 function getSound(state: AppReduxState) {
     const { sound } = state;
     return sound;

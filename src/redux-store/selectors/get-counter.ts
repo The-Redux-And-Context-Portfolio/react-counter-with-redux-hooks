@@ -1,4 +1,4 @@
-/* app imports */ 
+/* app imports */
 import { AppReduxState } from "../types";
 
 /* selector */
@@ -7,5 +7,5 @@ function getCounter(state: AppReduxState) {
     return counter;
 }
 
-/* exports */ 
+/* exports */
 export default getCounter;

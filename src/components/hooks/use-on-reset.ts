@@ -8,16 +8,16 @@ import playResetSound from "../utils/reset-sound";
 
 /* hook */
 function useOnReset() {
-    const sound = useSelector(getSound);
-    const reduxDispatch = useDispatch();
+  const sound = useSelector(getSound);
+  const reduxDispatch = useDispatch();
 
-    function handleOnReset() {
-        reduxDispatch(counterReset());
-        sound && playResetSound();
-    }
+  function handleOnReset() {
+    reduxDispatch(counterReset());
+    sound && playResetSound();
+  }
 
-    return { handleOnReset };
+  return { handleOnReset };
 }
 
-/* exports */ 
+/* exports */
 export default useOnReset;

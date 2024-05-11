@@ -13,15 +13,17 @@ import {
 
 /* component */
 function Buttons(): JSX.Element {
-  /* setup */
+  /* from the redux store */
   const sound = useSelector(getSound);
   const reduxDispatch = useDispatch();
 
+  /* event handler */
   function handleOnIncrement() {
     reduxDispatch(counterIncrement())
     sound && playClickSound();
   }
 
+  /* event handler */
   function handleOnDecrement() {
     reduxDispatch(counterDecrement());
     sound && playClickSound();

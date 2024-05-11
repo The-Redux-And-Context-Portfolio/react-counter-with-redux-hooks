@@ -6,11 +6,15 @@ import getSound from "../../redux-store/selectors/get-sound";
 import { counterReset } from "../../redux-store/actions/counter";
 import playResetSound from "../utils/reset-sound";
 
-/* hook */
+/**
+ * @returns - an event handler that helps to send a reset command to the redux store. it makes the
+ * value of the counter as 'zero'
+ */
 function useOnReset() {
   const sound = useSelector(getSound);
   const reduxDispatch = useDispatch();
 
+  /* event handler */
   function handleOnReset() {
     reduxDispatch(counterReset());
     sound && playResetSound();

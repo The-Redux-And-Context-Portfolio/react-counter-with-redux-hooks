@@ -8,6 +8,7 @@ import resetIconWhite from "../../assets/icons/reset-icon-white.svg";
 
 /* component */
 function Controls(): JSX.Element {
+  /* custom hooks being called */
   const { handleOnReset } = useOnReset();
   const { handleOnSound, soundIcon } = useSoundHook();
 
